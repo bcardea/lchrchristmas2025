@@ -1,8 +1,8 @@
 :root {
   --color-background: #f1d6b8;
   --color-background-dark: #b45d38;
-  --color-primary: #ff7f4d;
-  --color-primary-dark: #d45c32;
+  --color-primary: #a61414;
+  --color-primary-dark: #7f0f0f;
   --color-accent: #0f5b4f;
   --color-text: #3b2f2f;
   --color-light: #fff7ed;
@@ -36,20 +36,14 @@ a {
 
 .hero {
   position: relative;
-  min-height: 70vh;
+  min-height: 55vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   background: url('https://qgpyljnhjvoaatxsyygy.supabase.co/storage/v1/object/public/ChristmasLights/cleanback.png')
     center/cover no-repeat;
-  padding: 6rem 1.5rem 4rem;
-}
-
-.hero__overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(15, 91, 79, 0.65), rgba(15, 91, 79, 0.2));
+  padding: 4.5rem 1.5rem 3.5rem;
 }
 
 .hero__content {
@@ -59,6 +53,7 @@ a {
   display: grid;
   gap: 1.5rem;
   justify-items: center;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
 }
 
 .hero__title-img {
@@ -90,7 +85,7 @@ main {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(140deg, rgba(255, 127, 77, 0.18), rgba(15, 91, 79, 0.14));
+  background: linear-gradient(140deg, rgba(166, 20, 20, 0.18), rgba(15, 91, 79, 0.14));
   pointer-events: none;
 }
 
@@ -125,7 +120,7 @@ main {
   background: var(--color-light);
   padding: 2rem;
   border-radius: 24px;
-  border: 2px solid rgba(212, 92, 50, 0.2);
+  border: 2px solid rgba(166, 20, 20, 0.18);
   box-shadow: 0 12px 24px rgba(37, 20, 10, 0.14);
   display: grid;
   gap: 0.75rem;
@@ -170,7 +165,7 @@ main {
 .btn--light {
   background: var(--color-primary);
   color: var(--color-light);
-  box-shadow: 0 12px 24px rgba(212, 92, 50, 0.4);
+  box-shadow: 0 12px 24px rgba(166, 20, 20, 0.45);
 }
 
 .btn--light:hover,
@@ -187,7 +182,7 @@ main {
 
 .btn--outline:hover,
 .btn--outline:focus-visible {
-  background: rgba(255, 127, 77, 0.12);
+  background: rgba(166, 20, 20, 0.1);
   transform: translateY(-2px);
 }
 
@@ -201,7 +196,7 @@ main {
 }
 
 .section--feature::before {
-  background: radial-gradient(circle at top left, rgba(255, 127, 77, 0.35), transparent 60%),
+  background: radial-gradient(circle at top left, rgba(166, 20, 20, 0.35), transparent 60%),
     radial-gradient(circle at bottom right, rgba(15, 91, 79, 0.4), transparent 65%);
 }
 
@@ -291,7 +286,7 @@ main {
   top: 1rem;
   float: right;
   border: none;
-  background: rgba(212, 92, 50, 0.15);
+  background: rgba(166, 20, 20, 0.15);
   color: var(--color-primary-dark);
   font-size: 2rem;
   width: 2.5rem;
@@ -305,7 +300,7 @@ main {
 
 .modal__close:hover,
 .modal__close:focus-visible {
-  background: rgba(212, 92, 50, 0.3);
+  background: rgba(166, 20, 20, 0.3);
 }
 
 .tour article {
@@ -325,16 +320,54 @@ main {
 }
 
 .tour__intermission {
-  background: rgba(255, 127, 77, 0.14);
+  background: rgba(166, 20, 20, 0.12);
   border-radius: 18px;
   padding: 1rem 1.25rem;
   margin-top: 1.5rem;
 }
 
+.tour__navigator {
+  background: rgba(15, 91, 79, 0.08);
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.tour__navigator h3 {
+  margin-top: 0;
+}
+
+.tour__navigator-body {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.tour__step-details {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.tour__step-progress {
+  font-weight: 600;
+  margin: 0;
+  color: var(--color-accent);
+}
+
+.tour__fm-note {
+  font-weight: 600;
+  color: var(--color-primary-dark);
+}
+
+.tour__step-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
 @media (max-width: 640px) {
   .hero {
-    min-height: 60vh;
-    padding: 5rem 1.5rem 3.5rem;
+    min-height: 50vh;
+    padding: 3.75rem 1.25rem 3rem;
   }
 
   .section {
