@@ -14,11 +14,10 @@
   </head>
   <body>
     <header class="hero">
-      <div class="hero__overlay"></div>
       <div class="hero__content">
         <img
           class="hero__title-img"
-          src="https://qgpyljnhjvoaatxsyygy.supabase.co/storage/v1/object/public/ChristmasLights/titleupscaled%20Medium.png"
+          src="https://qgpyljnhjvoaatxsyygy.supabase.co/storage/v1/object/public/ChristmasLights/titlebackgroundremoved.png"
           alt="Lifepoint Christmas Lights"
         />
         <p class="hero__subtitle">
@@ -129,6 +128,36 @@
         <p class="modal__intro">
           Starting Point: Lifepoint Church (600 Jarman Rd, Chesapeake, VA 23322)
         </p>
+        <section class="tour__navigator" aria-live="polite">
+          <h3>Guided House-by-House Tour</h3>
+          <p>
+            Prefer to take it one stop at a time? Follow the itinerary below and
+            tap next when you are ready for the following destination.
+          </p>
+          <div class="tour__navigator-body">
+            <div class="tour__step-details">
+              <p class="tour__step-progress">
+                Stop <span id="tour-step-number">1</span> of
+                <span id="tour-step-total">10</span>
+              </p>
+              <h4 id="tour-step-title"></h4>
+              <p class="tour__address" id="tour-step-address"></p>
+              <p id="tour-step-description"></p>
+              <p class="tour__fm-note" id="tour-step-fm" hidden>
+                Look for the sign in the front lawn that shares the FM station to
+                tune in for the synchronized music.
+              </p>
+            </div>
+            <div class="tour__step-controls">
+              <button class="btn btn--outline" data-tour-prev disabled>
+                Previous Stop
+              </button>
+              <button class="btn btn--light" data-tour-next>
+                Next Stop
+              </button>
+            </div>
+          </div>
+        </section>
         <div class="tour">
           <section>
             <h3>Tour Prep</h3>
