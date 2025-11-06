@@ -112,6 +112,15 @@ a {
   transform-origin: center bottom;
 }
 
+@media (max-width:640px){
+
+ /* Hero bulb */
+ .hero .hero-bulb{
+  right:-173px;
+ }
+ 
+}
+
 /* Subtext */
 .hero-sub {
   font-family: 'Poppins', sans-serif;
