@@ -1,0 +1,291 @@
+:root {
+  --bg-main: #e4c39c;
+  --bg-deep: #1b3a2b;
+  --accent-warm: #f45a3d;
+  --accent-gold: #f2e4c5;
+  --text-dark: #2b1d18;
+  --text-light: #fff7ed;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    sans-serif;
+  background: var(--bg-main);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 75vh;
+  padding: clamp(4rem, 8vw, 6rem) clamp(1rem, 5vw, 3rem);
+  background: url('https://qgpyljnhjvoaatxsyygy.supabase.co/storage/v1/object/public/ChristmasLights/cleanback.png')
+      center/cover,
+    var(--bg-main);
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.35), transparent),
+    linear-gradient(135deg, rgba(244, 90, 61, 0.25), rgba(27, 58, 43, 0.65));
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.hero__content {
+  position: relative;
+  display: grid;
+  gap: 1.5rem;
+  justify-items: center;
+  color: var(--text-light);
+  max-width: 620px;
+}
+
+.hero__title {
+  max-width: min(90vw, 460px);
+  filter: drop-shadow(0 10px 30px rgba(10, 20, 15, 0.55));
+}
+
+.hero__subtitle {
+  font-size: clamp(1rem, 2.4vw, 1.25rem);
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+main {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.2), transparent 40%);
+}
+
+.section {
+  padding: clamp(3rem, 8vw, 5rem) clamp(1.5rem, 6vw, 5rem);
+}
+
+.section__header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto clamp(2rem, 5vw, 3rem);
+}
+
+.section__header h2 {
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  color: var(--bg-deep);
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.event-grid,
+.feature-grid {
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.event-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.event-card,
+.feature-card {
+  background: rgba(255, 255, 255, 0.72);
+  border-radius: 24px;
+  padding: clamp(1.75rem, 4vw, 2.5rem);
+  box-shadow: 0 25px 40px rgba(16, 33, 27, 0.18);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(242, 228, 197, 0.6);
+}
+
+.event-card h3,
+.feature-card h3 {
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+  color: var(--bg-deep);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.event-card__date {
+  font-weight: 600;
+  color: var(--accent-warm);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-family: inherit;
+}
+
+.btn:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.9);
+  outline-offset: 3px;
+}
+
+.btn--light {
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--bg-deep);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.btn--primary {
+  background: var(--bg-deep);
+  color: var(--accent-gold);
+  box-shadow: 0 15px 30px rgba(27, 58, 43, 0.4);
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--bg-deep);
+  border: 2px solid var(--bg-deep);
+}
+
+.btn:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 18px 35px rgba(27, 58, 43, 0.3);
+}
+
+.footer {
+  text-align: center;
+  padding: 3rem 1.5rem 4rem;
+  color: var(--bg-deep);
+  font-weight: 500;
+}
+
+.modal {
+  padding: 0;
+  border: none;
+  border-radius: 28px;
+  max-width: min(680px, 92vw);
+  width: 100%;
+  background: rgba(250, 243, 229, 0.95);
+  box-shadow: 0 35px 50px rgba(0, 0, 0, 0.35);
+}
+
+.modal::backdrop {
+  background: rgba(16, 33, 27, 0.7);
+}
+
+.modal__close {
+  position: sticky;
+  top: 0;
+  margin-left: auto;
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+  background: rgba(244, 90, 61, 0.9);
+  color: var(--text-light);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 12px 20px rgba(244, 90, 61, 0.35);
+}
+
+.modal__content {
+  padding: clamp(2.5rem, 6vw, 3rem);
+  max-height: min(80vh, 720px);
+  overflow-y: auto;
+}
+
+.modal__content h2 {
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  color: var(--bg-deep);
+  text-align: center;
+  margin-top: 0;
+}
+
+.modal__intro,
+.modal__closing {
+  text-align: center;
+  font-weight: 500;
+  color: var(--bg-deep);
+}
+
+.tour-section {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px dashed rgba(27, 58, 43, 0.3);
+}
+
+.tour-section h3 {
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  color: var(--accent-warm);
+  margin-bottom: 1rem;
+}
+
+.tour-stop {
+  margin-bottom: 1.5rem;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 20px;
+  padding: 1.2rem 1.4rem;
+  box-shadow: inset 0 0 0 1px rgba(27, 58, 43, 0.1);
+}
+
+.tour-stop h4 {
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-size: 1.3rem;
+  margin: 0 0 0.35rem;
+  color: var(--bg-deep);
+}
+
+.tour-stop__address {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: var(--accent-warm);
+  margin: 0 0 0.5rem;
+}
+
+.tour-stop__tip {
+  font-style: italic;
+  color: var(--bg-deep);
+}
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 70vh;
+  }
+
+  .modal__content {
+    padding: 2rem 1.5rem 2.5rem;
+  }
+
+  .modal__close {
+    margin-right: 1rem;
+  }
+}
