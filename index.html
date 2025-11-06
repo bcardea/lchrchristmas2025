@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lifepoint Christmas Lights</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <img
+          class="hero__title-img"
+          src="https://qgpyljnhjvoaatxsyygy.supabase.co/storage/v1/object/public/ChristmasLights/titleupscaled%20Medium.png"
+          alt="Lifepoint Christmas Lights"
+        />
+        <p class="hero__subtitle">
+          Celebrate the warmth, wonder, and community of the season with Lifepoint
+          Church.
+        </p>
+        <a class="btn btn--light" href="https://lifepointhamptonroads.org/plan-your-visit">
+          Plan Your Visit
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="section section--events" id="events">
+        <div class="section__header">
+          <h2 class="section__title">Christmas Gatherings</h2>
+          <p class="section__subtitle">
+            Mark your calendar and invite your friends and family to experience
+            Christmas at Lifepoint.
+          </p>
+        </div>
+        <div class="events">
+          <article class="event-card">
+            <h3 class="event-card__date">December 13</h3>
+            <h4 class="event-card__title">Family Friendly Christmas Movie Day</h4>
+            <p class="event-card__time">1:00 &ndash; 3:00 PM</p>
+            <p>
+              For families with children, enjoy cookies, homemade ornaments, a
+              movie in our Holiday Movie Theater, and so much more.
+            </p>
+            <a
+              class="btn btn--outline"
+              href="https://lifepointhamptonroads.churchcenter.com/people/forms/1089820"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Reserve Your Seat
+            </a>
+          </article>
+
+          <article class="event-card">
+            <h3 class="event-card__date">December 21</h3>
+            <h4 class="event-card__title">New Service Times Launch</h4>
+            <p class="event-card__time">9:00 AM &amp; 11:00 AM</p>
+            <p>
+              Lifepoint is introducing a second service and new Sunday gathering
+              times. Bring someone along and discover a place to belong.
+            </p>
+            <a
+              class="btn btn--outline"
+              href="https://lifepointhamptonroads.org/plan-your-visit"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Plan Your Visit
+            </a>
+          </article>
+
+          <article class="event-card">
+            <h3 class="event-card__date">December 24</h3>
+            <h4 class="event-card__title">Candlelight Christmas Eve Service</h4>
+            <p class="event-card__time">5:00 PM</p>
+            <p>
+              Gather with us for a candlelight celebration of Jesus, complete with
+              carols, candlelight, and a moment to reflect.
+            </p>
+            <a
+              class="btn btn--outline"
+              href="https://lifepointhamptonroads.org/plan-your-visit"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Plan Your Visit
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--feature" id="light-tour">
+        <div class="feature">
+          <div class="feature__text">
+            <h2 class="section__title">A Chesapeake Christmas Light Tour</h2>
+            <p>
+              Turn up the Christmas playlist and explore Chesapeake's brightest
+              displays with a curated drive that begins and ends at Lifepoint
+              Church. This family-friendly adventure includes music-synced shows,
+              local favorites, and a cozy cocoa break.
+            </p>
+            <button class="btn btn--light" data-modal-open>
+              View the Tour Guide
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; <span id="year"></span> Lifepoint Hampton Roads. Merry Christmas!</p>
+    </footer>
+
+    <div class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="modal__overlay" data-modal-close></div>
+      <div class="modal__content" role="document">
+        <button class="modal__close" aria-label="Close tour guide" data-modal-close>
+          &times;
+        </button>
+        <h2>The Lifepoint Christmas Light Tour 🎄</h2>
+        <p class="modal__intro">
+          Starting Point: Lifepoint Church (600 Jarman Rd, Chesapeake, VA 23322)
+        </p>
+        <div class="tour">
+          <section>
+            <h3>Tour Prep</h3>
+            <ul>
+              <li>Create a playlist: get that Christmas music ready!</li>
+              <li>Designate a navigator to read directions and fun facts.</li>
+              <li>Bring a car radio for the music-synced shows.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Part 1: The Western Branch Loop</h3>
+            <article>
+              <h4>Stop 1: The Dock Landing Corner</h4>
+              <p class="tour__address">4107 Woodland Drive, Chesapeake, VA 23321</p>
+              <p>
+                A beautifully decorated corner lot that anchors a neighborhood full
+                of festive spirit. Take a drive through nearby streets for bonus
+                displays!
+              </p>
+            </article>
+            <article>
+              <h4>Stop 2: The Garden of Wonders</h4>
+              <p class="tour__address">4319 Topsail Landing, Chesapeake, VA 23321</p>
+              <p>
+                Explore a whimsical garden packed with unique characters,
+                including flying reindeer and a giant abominable snowman.
+              </p>
+            </article>
+          </section>
+
+          <section>
+            <h3>Part 2: The Deep Creek Spectacle</h3>
+            <article>
+              <h4>Stop 3: Matson Family Lights</h4>
+              <p class="tour__address">3316 Dietz Drive, Chesapeake, VA 23320</p>
+              <p>
+                A beloved tradition featuring about 35,000 lights synchronized to a
+                festive playlist. Tune to the FM station noted on-site.
+              </p>
+            </article>
+            <article>
+              <h4>Stop 4: The Waterside Spectacle (#1!)</h4>
+              <p class="tour__address">1337 Simon Drive, Chesapeake, VA 23320</p>
+              <p>
+                The main event! Thousands of lights reflect on the water for a
+                magical, shimmering show.
+              </p>
+            </article>
+          </section>
+
+          <section>
+            <h3>Part 3: The Hickory Detour</h3>
+            <article>
+              <h4>Stop 5: The Shore Road Show</h4>
+              <p class="tour__address">1109 Shore Road, Chesapeake, VA 23323</p>
+              <p>
+                A popular music-synced display blending light and sound. Watch for
+                the FM frequency sign when you arrive.
+              </p>
+            </article>
+          </section>
+
+          <section class="tour__intermission">
+            <h3>☕ Intermission: Hot Chocolate Pit Stop</h3>
+            <p>
+              Wawa &mdash; 101 Hillcrest Pkwy, Chesapeake, VA 23322. An easy-in,
+              easy-out stop with hot chocolate (and coffee!) for the whole crew.
+            </p>
+          </section>
+
+          <section>
+            <h3>Part 4: The Great Bridge Grand Finale</h3>
+            <article>
+              <h4>Stop 6: A Frozen Wonderland</h4>
+              <p class="tour__address">801 Pin Oak Pl, Chesapeake, VA 23322</p>
+              <p>
+                Perfect for families, featuring a yard filled with Frozen-themed
+                characters.
+              </p>
+            </article>
+            <article>
+              <h4>Stop 7: Pine Level Lane's Classic Christmas</h4>
+              <p class="tour__address">909 Pine Level Ln, Chesapeake, VA 23322</p>
+              <p>
+                A bright and energetic display with colorful lights and charming
+                inflatables.
+              </p>
+            </article>
+            <article>
+              <h4>Stop 8: The Snowman Sanctuary</h4>
+              <p class="tour__address">910 Weeping Willow Dr, Chesapeake, VA 23322</p>
+              <p>
+                A cohesive, snowman-themed display that Frosty fans won't want to
+                miss.
+              </p>
+            </article>
+            <article>
+              <h4>Stop 9: Chattanooga Street's Elegant Glow</h4>
+              <p class="tour__address">919 Chattanooga St, Chesapeake, VA 23322</p>
+              <p>
+                Serene white lights nestled among the trees for a tasteful,
+                naturalistic design.
+              </p>
+            </article>
+            <article>
+              <h4>Stop 10: North Haven Circle's Dynamic Display</h4>
+              <p class="tour__address">966 North Haven Circle, Chesapeake, VA 23322</p>
+              <p>
+                A high-energy light show synchronized to music that's broadcast out
+                loud. Roll down your windows and enjoy!
+              </p>
+            </article>
+          </section>
+        </div>
+        <p class="modal__closing">
+          From here you're only minutes away from Lifepoint Church. Have a merry
+          and meaningful Christmas!
+        </p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
