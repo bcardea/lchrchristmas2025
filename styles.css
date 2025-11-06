@@ -1,8 +1,8 @@
 :root {
   --color-background: #f1d6b8;
   --color-background-dark: #b45d38;
-  --color-primary: #ff7f4d;
-  --color-primary-dark: #d45c32;
+  --color-primary: #a52a2a;
+  --color-primary-dark: #8b1a1a;
   --color-accent: #0f5b4f;
   --color-text: #3b2f2f;
   --color-light: #fff7ed;
@@ -49,7 +49,7 @@ a {
 .hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(15, 91, 79, 0.65), rgba(15, 91, 79, 0.2));
+  background: transparent;
 }
 
 .hero__content {
@@ -100,7 +100,7 @@ main {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(255, 127, 77, 0.08), rgba(15, 91, 79, 0.06));
+  background: linear-gradient(135deg, rgba(165, 42, 42, 0.08), rgba(15, 91, 79, 0.06));
   pointer-events: none;
 }
 
@@ -135,7 +135,7 @@ main {
   background: var(--color-light);
   padding: 2rem;
   border-radius: 24px;
-  border: 2px solid rgba(212, 92, 50, 0.15);
+  border: 2px solid rgba(165, 42, 42, 0.15);
   box-shadow: 0 8px 20px rgba(37, 20, 10, 0.1);
   display: grid;
   gap: 0.75rem;
@@ -190,7 +190,7 @@ main {
 .btn--light {
   background: var(--color-primary);
   color: var(--color-light);
-  box-shadow: 0 12px 24px rgba(212, 92, 50, 0.4);
+  box-shadow: 0 12px 24px rgba(165, 42, 42, 0.4);
 }
 
 .btn--light:hover,
@@ -207,7 +207,7 @@ main {
 
 .btn--outline:hover,
 .btn--outline:focus-visible {
-  background: rgba(255, 127, 77, 0.12);
+  background: rgba(165, 42, 42, 0.12);
   transform: translateY(-2px);
 }
 
@@ -224,7 +224,7 @@ main {
 }
 
 .section--feature::before {
-  background: linear-gradient(135deg, rgba(255, 127, 77, 0.12), rgba(15, 91, 79, 0.08));
+  background: linear-gradient(135deg, rgba(165, 42, 42, 0.12), rgba(15, 91, 79, 0.08));
 }
 
 .feature {
@@ -330,7 +330,7 @@ main {
   top: 1rem;
   float: right;
   border: none;
-  background: rgba(212, 92, 50, 0.15);
+  background: rgba(165, 42, 42, 0.15);
   color: var(--color-primary-dark);
   font-size: 2rem;
   width: 2.5rem;
@@ -344,7 +344,7 @@ main {
 
 .modal__close:hover,
 .modal__close:focus-visible {
-  background: rgba(212, 92, 50, 0.3);
+  background: rgba(165, 42, 42, 0.3);
 }
 
 .tour article {
@@ -364,7 +364,7 @@ main {
 }
 
 .tour__intermission {
-  background: rgba(255, 127, 77, 0.14);
+  background: rgba(165, 42, 42, 0.14);
   border-radius: 18px;
   padding: 1rem 1.25rem;
   margin-top: 1.5rem;
