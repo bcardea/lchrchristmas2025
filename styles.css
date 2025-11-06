@@ -1,0 +1,325 @@
+:root {
+  --orange: #f2643d;
+  --deep-green: #1f4d3b;
+  --forest: #0d4031;
+  --cream: #f5e5d4;
+  --warm-tan: #d8b08c;
+  --charcoal: #1f1b18;
+  --white: #ffffff;
+  --radius-lg: 28px;
+  --radius-md: 20px;
+  --shadow-soft: 0 25px 60px rgba(15, 32, 24, 0.25);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: var(--cream);
+  background: linear-gradient(135deg, #0f3326 0%, #2b0f0f 100%);
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  color: var(--cream);
+  margin: 0 0 0.3em;
+}
+
+p {
+  line-height: 1.7;
+  margin: 0 0 1em;
+}
+
+.hero {
+  position: relative;
+  background: url('https://qgpyljnhjvoaatxsyygy.supabase.co/storage/v1/object/public/ChristmasLights/cleanback.png') center/cover no-repeat;
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, rgba(13, 32, 24, 0.85) 0%, rgba(62, 22, 15, 0.75) 100%);
+}
+
+.hero__content {
+  position: relative;
+  max-width: 720px;
+  display: grid;
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.hero__title {
+  width: min(520px, 90vw);
+  filter: drop-shadow(0 10px 30px rgba(5, 5, 5, 0.4));
+}
+
+.hero__subtitle {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: var(--cream);
+  max-width: 560px;
+}
+
+.section {
+  padding: clamp(3rem, 6vw, 5.5rem) 1.5rem;
+}
+
+.section__heading {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+}
+
+.section__heading p {
+  color: rgba(245, 229, 212, 0.85);
+}
+
+.events {
+  background: radial-gradient(circle at top right, rgba(242, 100, 61, 0.15), transparent 60%),
+              radial-gradient(circle at bottom left, rgba(216, 176, 140, 0.12), transparent 55%);
+}
+
+.events__grid {
+  display: grid;
+  gap: 1.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.event-card {
+  background: rgba(14, 31, 25, 0.8);
+  border: 1px solid rgba(242, 100, 61, 0.2);
+  border-radius: var(--radius-lg);
+  padding: 2.2rem 2rem 2.4rem;
+  box-shadow: var(--shadow-soft);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+}
+
+.event-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(140deg, rgba(242, 100, 61, 0.18) 0%, rgba(31, 77, 59, 0.45) 100%);
+  opacity: 0.85;
+  z-index: 0;
+}
+
+.event-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.event-card__date {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.08em;
+  font-size: 0.95rem;
+  background: rgba(242, 100, 61, 0.9);
+  color: var(--white);
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.event-card h3 {
+  font-size: 1.6rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--orange);
+  color: var(--white);
+  text-decoration: none;
+  padding: 0.75rem 1.6rem;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(242, 100, 61, 0.25);
+}
+
+.button--light {
+  background: var(--cream);
+  color: var(--charcoal);
+}
+
+.button--outline {
+  background: transparent;
+  border: 2px solid rgba(245, 229, 212, 0.6);
+  color: var(--cream);
+}
+
+.button--outline:hover,
+.button--outline:focus-visible {
+  background: rgba(245, 229, 212, 0.1);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+}
+
+.tour {
+  background: linear-gradient(120deg, rgba(31, 77, 59, 0.85) 0%, rgba(13, 32, 24, 0.95) 50%, rgba(86, 39, 23, 0.85) 100%);
+  display: flex;
+  justify-content: center;
+}
+
+.tour__content {
+  max-width: 720px;
+  text-align: center;
+  display: grid;
+  gap: 1.6rem;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem 1rem 3rem;
+  color: rgba(245, 229, 212, 0.7);
+  font-size: 0.9rem;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal[aria-hidden="false"] {
+  display: flex;
+}
+
+.modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 18, 15, 0.75);
+  backdrop-filter: blur(3px);
+}
+
+.modal__dialog {
+  position: relative;
+  background: #12241c;
+  border-radius: var(--radius-lg);
+  max-height: min(90vh, 960px);
+  max-width: min(920px, 92vw);
+  overflow: hidden;
+  border: 1px solid rgba(242, 100, 61, 0.25);
+  box-shadow: var(--shadow-soft);
+}
+
+.modal__body {
+  padding: clamp(1.5rem, 2vw, 2.5rem) clamp(1.4rem, 3vw, 3rem) 2.5rem;
+  overflow-y: auto;
+  max-height: min(90vh, 920px);
+}
+
+.modal__intro,
+.modal__outro {
+  color: rgba(245, 229, 212, 0.85);
+}
+
+.modal__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  border: none;
+  background: rgba(242, 100, 61, 0.9);
+  color: var(--white);
+  font-size: 1.6rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.modal__close:hover,
+.modal__close:focus-visible {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(242, 100, 61, 0.3);
+}
+
+.tour-steps {
+  display: grid;
+  gap: 2rem;
+}
+
+.tour-steps section {
+  background: rgba(15, 32, 24, 0.85);
+  border-radius: var(--radius-md);
+  padding: 1.4rem 1.6rem;
+  border: 1px solid rgba(216, 176, 140, 0.2);
+}
+
+.tour-steps h3 {
+  color: var(--warm-tan);
+  font-size: 1.3rem;
+}
+
+.tour-steps h4 {
+  font-size: 1.05rem;
+  color: var(--cream);
+}
+
+.tour-steps ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.tour-steps li {
+  background: rgba(18, 36, 28, 0.8);
+  padding: 1rem 1.2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(242, 100, 61, 0.12);
+}
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 70vh;
+  }
+
+  .hero__subtitle {
+    font-size: 1rem;
+  }
+
+  .event-card {
+    padding: 1.8rem 1.6rem 2rem;
+  }
+}
