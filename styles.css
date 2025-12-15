@@ -362,9 +362,11 @@ main {
 
 .modal__content {
   position: relative;
-  max-width: min(900px, 100%);
-  max-height: min(90vh, 800px);
-  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  width: min(1100px, 96vw);
+  max-height: 95vh;
+  overflow: auto;
   background: var(--color-light);
   border-radius: 32px;
   padding: clamp(1.5rem, 3vw, 3rem);
@@ -396,6 +398,26 @@ main {
 .modal__intro,
 .modal__closing {
   font-weight: 500;
+}
+
+.modal__iframe-wrap {
+  position: relative;
+  width: 100%;
+  height: min(75vh, 900px);
+  min-height: 60vh;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 16px 32px rgba(15, 91, 79, 0.3);
+  background: #000;
+  margin-top: 1.25rem;
+}
+
+.modal__iframe-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 .modal__close {
