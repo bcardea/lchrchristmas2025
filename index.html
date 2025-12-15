@@ -39,14 +39,9 @@
               For families with children, enjoy cookies, homemade ornaments, a
               movie in our Holiday Movie Theater, and so much more.
             </p>
-            <a
-              class="btn btn--outline"
-              href="https://fall-fest-landing-pa-va3j.bolt.host/familychristmasparty"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <button class="btn btn--outline" type="button" data-modal-target="recap-modal">
               View the Photo Recap
-            </a>
+            </button>
           </article>
 
           <article class="event-card">
@@ -103,7 +98,7 @@
               Church. This family-friendly adventure includes music-synced shows,
               local favorites, and a cozy cocoa break.
             </p>
-            <button class="btn btn--light" data-modal-open>
+            <button class="btn btn--light" type="button" data-modal-target="tour-modal">
               View the Tour Guide
             </button>
           </div>
@@ -115,7 +110,28 @@
       <p>&copy; <span id="year"></span> Lifepoint Hampton Roads. Merry Christmas!</p>
     </footer>
 
-    <div class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal" aria-hidden="true" role="dialog" aria-modal="true" data-modal-id="recap-modal">
+      <div class="modal__overlay" data-modal-close></div>
+      <div class="modal__content" role="document">
+        <button class="modal__close" aria-label="Close photo recap" data-modal-close>
+          &times;
+        </button>
+        <h2>Family Christmas Party Photo Recap</h2>
+        <p class="modal__intro">
+          Relive the highlights from our December 13 celebration right here on the site.
+        </p>
+        <div class="modal__iframe-wrap">
+          <iframe
+            src="https://fall-fest-landing-pa-va3j.bolt.host/familychristmasparty"
+            title="Family Christmas Party Photo Recap"
+            loading="lazy"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" aria-hidden="true" role="dialog" aria-modal="true" data-modal-id="tour-modal">
       <div class="modal__overlay" data-modal-close></div>
       <div class="modal__content" role="document">
         <button class="modal__close" aria-label="Close tour guide" data-modal-close>
